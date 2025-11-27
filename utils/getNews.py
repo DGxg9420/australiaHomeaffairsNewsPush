@@ -65,7 +65,7 @@ def getNews():
           return title, content
       # 没有新的消息
       else:
-        return None
+        return "None"
     else:
       with open(hashIdPath, "w", encoding="utf-8") as f:
         f.write(hashId)

@@ -3,7 +3,7 @@ from utils.translator import translate
 from bs4 import BeautifulSoup, NavigableString
 
 
-def parserHtml(content_html: str)  -> str:
+def parserHtml(content_html: str, APP_KEY: str, APP_SECRET: str)  -> str:
     try:
         # 解析
         soup = BeautifulSoup(content_html, 'html.parser')
@@ -37,7 +37,7 @@ def parserHtml(content_html: str)  -> str:
             if not clean_text:
                 continue
             # 翻译
-            translated_text = translate(clean_text)
+            translated_text = translate(clean_text, APP_KEY, APP_SECRET)
             if not translated_text:
                 translated_text = clean_text
 

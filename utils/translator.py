@@ -1,15 +1,8 @@
-import tomllib
 import requests
-from pathlib import Path
 from utils.AuthV3Util import addAuthParams
 
-BASEDIR = Path(__file__).parent.parent
-CONFIG = tomllib.load(open(BASEDIR.joinpath("config.toml"), "rb"))
-APP_KEY = CONFIG['APP_KEY']
-APP_SECRET = CONFIG['APP_SECRET']
 
-
-def translate(text: str):
+def translate(text: str, APP_KEY: str, APP_SECRET: str):
     """
     note: 将下列变量替换为需要请求的参数
     """
