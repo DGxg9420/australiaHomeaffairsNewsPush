@@ -1,0 +1,5 @@
+# 有道文本翻译API Key
+# 您的应用ID
+APP_KEY = 'app key'
+# 您的应用密钥
+APP_SECRET = 'app secret'
