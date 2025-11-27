@@ -18,7 +18,7 @@ def main():
         translate_content = parserHtml(content, APP_KEY, APP_SECRET)
         try:
             inner_title = f"{title}\n{translate_title}\n\n"
-            QLAPI.notify(translate_title, inner_title + translate_content)
+            QLAPI.notify("奥移民：" + translate_title, inner_title + translate_content)
         except NameError:
             noti_title = title + f"({translate_title})"
             print(noti_title)
